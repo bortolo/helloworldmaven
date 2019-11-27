@@ -1,3 +1,0 @@
-127.0.0.1 - - [27/Nov/2019:09:55:52 +0100] GET /home HTTP/1.1 302 - http-bio-8080-exec-2 0
-127.0.0.1 - - [27/Nov/2019:09:55:52 +0100] GET /home/ HTTP/1.1 304 - http-bio-8080-exec-3 10
-127.0.0.1 - - [27/Nov/2019:09:55:53 +0100] GET /home/saytime HTTP/1.1 200 78 http-bio-8080-exec-4 3
