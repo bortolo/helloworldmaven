@@ -24,7 +24,7 @@ https://stackoverflow.com/questions/9988814/how-do-i-find-out-which-settings-xml
 How to find tomcat.xml file to set users
 
 
-TO DEPLOY ON TOMCAT with Maven
+DEPLOY ON TOMCAT with Maven
 
 Maven settings
   settings.xml (esistono due settings file, quello user specific ha la precedenza nel merge) aggiungere il server tomcat e le credenziali
@@ -36,16 +36,9 @@ Maven POM
   usare plugin tomcat per deploy (concordanza con id server fra settings e POM)
 
 
-<!-- plugin to embed Tomcat in a Java JAR file -->
-<!-- https://www.theserverside.com/tutorial/How-to-embed-Tomcat-and-Java-web-apps-in-an-executable-JAR -->
- <plugin>
-    <groupId>org.apache.tomcat.maven</groupId>
-    <artifactId>tomcat7-maven-plugin</artifactId>
-    <version>2.1</version>
-    <configuration>
-      <!-- context root for Java web apps -->
-      <path>/home</path>
-      <!-- name of Tomcat executable jar file -->
-      <finalName>executable.jar</finalName>
-    </configuration>
- </plugin>
+INSTALLARE TOMCAT su ubuntu
+https://www.linode.com/docs/development/frameworks/apache-tomcat-on-ubuntu-16-04/
+
+TO DO:
+usare ansible per modificare il configuration file tomcat-users.xml
+usare ansible per far partire maven? jenkins?
