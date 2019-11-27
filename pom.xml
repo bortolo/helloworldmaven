@@ -23,7 +23,7 @@
         <version>3.0.1</version>
         <scope>provided</scope>
     </dependency>
-    
+
   </dependencies>
 
   <build>
@@ -31,18 +31,16 @@
     <pluginManagement>
       <plugins>
 
-         <!-- plugin to embed Tomcat in a Java JAR file -->
-         <!-- https://www.theserverside.com/tutorial/How-to-embed-Tomcat-and-Java-web-apps-in-an-executable-JAR -->
+          <!-- Configure the Tomcat Maven plugin -->
           <plugin>
-             <groupId>org.apache.tomcat.maven</groupId>
-             <artifactId>tomcat7-maven-plugin</artifactId>
-             <version>2.1</version>
-             <configuration>
-               <!-- context root for Java web apps -->
-               <path>/home</path>
-               <!-- name of Tomcat executable jar file -->
-               <finalName>executable.jar</finalName>
-             </configuration>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-maven-plugin</artifactId>
+            <version>2.2</version>
+            <configuration>
+              <server>myserver</server>
+              <url>http://localhost:8080/manager/text</url>
+              <path>/home</path>
+            </configuration>
           </plugin>
 
        </plugins>
